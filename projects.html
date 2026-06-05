@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Lowela Villadolid — LearnSphere AI Learning Analytics and NeoME Gamified Wellness App." />
+  <title>Projects — Lowela O. Villadolid</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    .project-full-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      margin-bottom: 3rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .project-full-card:hover { border-color: var(--border-h); box-shadow: var(--sh-acc); }
+    .project-full-banner {
+      width: 100%; padding: 4rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      position: relative; overflow: hidden;
+      gap: 2rem;
+    }
+    .banner-text { position: relative; z-index: 1; }
+    .banner-icon { font-size: 6rem; color: rgba(246, 242, 255, 0.20); position: relative; z-index: 1; flex-shrink: 0; }
+    .project-full-body { padding: 2rem 2.5rem 2.5rem; }
+    .project-full-title { font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
+    .project-full-subtitle { font-size: 0.95rem; font-weight: 600; color: var(--accent); margin-bottom: 1.5rem; }
+    .project-full-section { margin-bottom: 1.75rem; }
+    .project-full-section-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem;
+    }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .feature-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; color: var(--text-sec); line-height: 1.6; }
+    .feature-list li::before { content: '›'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .project-full-meta {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      padding-top: 1.5rem; border-top: 1px solid var(--border);
+    }
+    .meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--muted); }
+    .meta-item i { color: var(--accent); }
+    @media (max-width: 600px) {
+      .project-full-banner { flex-direction: column; padding: 2.5rem 1.5rem; }
+      .banner-icon { font-size: 3.5rem; }
+      .project-full-body { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">LOV</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="navMobileMenu">
+    <button class="nav-mobile-close" id="navMobileClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <div class="page-hero sect-grape">
+    <div class="container">
+      <div class="section-tag reveal">Portfolio</div>
+      <h1 class="page-hero-title reveal">Projects</h1>
+      <p class="page-hero-sub reveal">Real problems. Real tech stacks. Real impact.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section section-alt sect-lavender">
+      <div class="container" style="max-width:900px;">
+
+        <!-- ─── LearnSphere ─── -->
+        <div class="project-full-card reveal">
+          <div class="project-full-banner" style="background: #36255C;">
+            <div class="banner-text">
+              <div class="project-date" style="color:rgba(246,242,255,0.65); margin-bottom:0.5rem;">
+                <i class="fas fa-calendar-alt"></i> Dec 2025 – May 2026 · Capstone Project
+              </div>
+              <h2 style="color:#f6f2ff; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:800; margin-bottom:0.3rem;">LearnSphere</h2>
+              <p style="color:rgba(246,242,255,0.72); font-size:0.95rem; font-weight:600;">AI-Powered Learning Analytics System</p>
+            </div>
+            <div class="banner-icon"><i class="fas fa-chart-line"></i></div>
+          </div>
+          <div class="project-full-body">
+            <div class="project-full-section">
+              <div class="project-full-section-label">Overview</div>
+              <p style="color:var(--text-sec); font-size:0.9rem; line-height:1.75;">
+                LearnSphere is a comprehensive learning analytics platform designed to help educators identify at-risk students and personalize interventions. It uses an <strong style="color:var(--text)">XGBoost</strong> model to predict student performance from behavioral and academic data, and <strong style="color:var(--text)">SHAP (SHapley Additive exPlanations)</strong> to make the predictions interpretable and actionable for instructors — not just a black box.
+              </p>
+            </div>
+            <div class="project-full-section">
+              <div class="project-full-section-label">Key Features</div>
+              <ul class="feature-list">
+                <li>Predictive analytics engine using XGBoost trained on student engagement, grades, and activity data</li>
+                <li>SHAP-powered explanations visualizing which factors most influence each student's predicted outcome</li>
+                <li>Real-time educator dashboard with drill-down views per student, class, and cohort</li>
+                <li>Automated intervention recommendations based on risk level and identified risk factors</li>
+                <li>Supabase-powered backend with Row Level Security for student data privacy</li>
+                <li>FastAPI RESTful backend serving ML inference endpoints with sub-200ms response times</li>
+                <li>Responsive ReactJS frontend with TypeScript for type-safe UI development</li>
+              </ul>
+            </div>
+            <div class="project-full-section">
+              <div class="project-full-section-label">Tech Stack</div>
+              <div class="project-tags" style="margin-bottom:0;">
+                <span class="project-tag">ReactJS</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">TailwindCSS</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">XGBoost</span>
+                <span class="project-tag">SHAP</span>
+                <span class="project-tag">Supabase</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">Scikit-learn</span>
+              </div>
+            </div>
+            <div class="project-full-meta">
+              <div class="meta-item"><i class="fas fa-code-branch"></i> Capstone Project</div>
+              <div class="meta-item"><i class="fas fa-users"></i> Team of 2</div>
+              <div class="meta-item"><i class="fas fa-calendar"></i> Dec 2025 – May 2026</div>
+              <div style="margin-left:auto;">
+                <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── NeoME ─── -->
+        <div class="project-full-card reveal">
+          <div class="project-full-banner" style="background: #36255C;">
+            <div class="banner-text">
+              <div class="project-date" style="color:rgba(246,242,255,0.65); margin-bottom:0.5rem;">
+                <i class="fas fa-calendar-alt"></i> Jan – May 2025 · Capstone Project
+              </div>
+              <h2 style="color:#f6f2ff; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:800; margin-bottom:0.3rem;">NeoME</h2>
+              <p style="color:rgba(246,242,255,0.72); font-size:0.95rem; font-weight:600;">Gamified AI-Driven Wellness App</p>
+            </div>
+            <div class="banner-icon"><i class="fas fa-mobile-alt"></i></div>
+          </div>
+          <div class="project-full-body">
+            <div class="project-full-section">
+              <div class="project-full-section-label">Overview</div>
+              <p style="color:var(--text-sec); font-size:0.9rem; line-height:1.75;">
+                NeoME is a cross-platform mobile wellness application that makes healthy habits engaging through gamification. At its core is an <strong style="color:var(--text)">AI wellness companion</strong> powered by Google's Gemini API, offering conversational check-ins, mood analysis, and personalized wellness nudges. Users earn streaks, badges, and rewards for maintaining healthy routines.
+              </p>
+            </div>
+            <div class="project-full-section">
+              <div class="project-full-section-label">Key Features</div>
+              <ul class="feature-list">
+                <li>AI-powered wellness companion using Gemini API for natural conversation, mood journaling, and personalized advice</li>
+                <li>Gamified habit tracker with streaks, experience points, badges, and a visual progression system</li>
+                <li>Mood analytics dashboard with historical trends and pattern recognition</li>
+                <li>Personalized wellness recommendations generated from user behavior and mood history via Flask ML backend</li>
+                <li>Firebase Authentication and Firestore for real-time sync across devices</li>
+                <li>Push notifications for habit reminders and wellness check-in prompts</li>
+                <li>Smooth, native-feeling UI built with React Native and Expo for iOS and Android</li>
+              </ul>
+            </div>
+            <div class="project-full-section">
+              <div class="project-full-section-label">Tech Stack</div>
+              <div class="project-tags" style="margin-bottom:0;">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Expo</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">Firestore</span>
+                <span class="project-tag">Google Gemini API</span>
+                <span class="project-tag">Expo Notifications</span>
+                <span class="project-tag">AsyncStorage</span>
+              </div>
+            </div>
+            <div class="project-full-meta">
+              <div class="meta-item"><i class="fas fa-code-branch"></i> Capstone Project</div>
+              <div class="meta-item"><i class="fas fa-users"></i> Team of 2</div>
+              <div class="meta-item"><i class="fas fa-calendar"></i> Jan – May 2025</div>
+              <div style="margin-left:auto;">
+                <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer sect-grape">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Lowela O. Villadolid</p>
+        <div class="footer-socials">
+          <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-note">Built with passion in Cebu 🇵🇭</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

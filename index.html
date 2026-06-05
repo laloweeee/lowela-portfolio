@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lowela O. Villadolid — Computer Science graduate, full-stack developer and AI/ML engineer seeking entry-level tech roles." />
+  <title>Lowela O. Villadolid — Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">LOV</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
+    <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero sect-grape" id="home">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Open to Entry-Level Opportunities
+        </div>
+        <h1 class="hero-name">LOWELA O.<br>VILLADOLID</h1>
+        <div class="hero-role-wrap">
+          <span id="typedRole"></span><span class="typed-cursor"></span>
+        </div>
+        <p class="hero-desc">
+          I build thoughtful software — from predictive ML engines to gamified mobile apps.
+        </p>
+        <div class="hero-btns" id="hero-btns">
+          <a href="projects.html" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View My Work
+          </a>
+          <a href="assets/lowela-villadolid-resume.pdf" class="btn btn-outline" download>
+            <i class="fas fa-download"></i> Download Résumé
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Traineeships</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Capstone Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">7+</div>
+            <div class="stat-label">Languages</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">Magna</div>
+            <div class="stat-label">Cum Laude Candidate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT SNAPSHOT ═══ -->
+  <section class="section-sm section-alt sect-grape">
+    <div class="container">
+      <div class="about-snap reveal">
+        <div class="section-tag">About Me</div>
+        <p style="font-size:1.05rem; color:var(--text-sec); line-height:1.75; margin-bottom:0;">
+          I'm a CS graduate from UCLM with hands-on experience across full-stack development, AI/ML systems, SAP ABAP, and ServiceNow.
+          I've trained at <strong style="color:var(--text)">Accenture</strong>, <strong style="color:var(--text)">Alliance Software Inc.</strong>, and <strong style="color:var(--text)">Rococo Global Technologies</strong> — bringing a detail-oriented, results-driven approach to every project.
+        </p>
+        <div class="about-snap-chips">
+          <span class="chip">🎓 Magna Cum Laude Candidate</span>
+          <span class="chip">📚 Dean's Lister</span>
+          <span class="chip">🏫 UCLM, Class of 2026</span>
+          <span class="chip">✍️ Associate Editor-in-Chief</span>
+        </div>
+        <a href="about.html" class="view-more">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS SNAPSHOT ═══ -->
+  <section class="section-sm sect-lavender" id="skills-snap">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Skills</div>
+        <h2 class="section-title">What I Work With</h2>
+        <p class="section-subtitle">A snapshot of my core technical toolkit — full-stack to AI/ML.</p>
+      </div>
+      <div class="skill-snap-grid">
+        <div class="skill-snap-chip reveal d1">
+          <i class="fab fa-js-square"></i>
+          <span>TypeScript / JS</span>
+        </div>
+        <div class="skill-snap-chip reveal d2">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="skill-snap-chip reveal d3">
+          <i class="fab fa-react"></i>
+          <span>React / Native</span>
+        </div>
+        <div class="skill-snap-chip reveal d4">
+          <i class="fas fa-server"></i>
+          <span>.NET / C#</span>
+        </div>
+        <div class="skill-snap-chip reveal d5">
+          <i class="fas fa-database"></i>
+          <span>SQL / Firebase</span>
+        </div>
+        <div class="skill-snap-chip reveal d6">
+          <i class="fas fa-brain"></i>
+          <span>AI / ML (XGBoost)</span>
+        </div>
+      </div>
+      <div style="margin-top:1.75rem;" class="reveal">
+        <a href="skills.html" class="view-more">See All Skills <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED PROJECTS ═══ -->
+  <section class="section section-alt sect-grape" id="featured-projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Projects</div>
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-subtitle">Two projects I'm most proud of — each solving a real problem with thoughtful engineering.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- LearnSphere -->
+        <div class="project-card reveal d1">
+          <div class="project-thumb">
+            <i class="fas fa-chart-line"></i>
+            <span class="project-thumb-label">LearnSphere — Learning Analytics</span>
+          </div>
+          <div class="project-body">
+            <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>Dec 2025 – May 2026</div>
+            <div class="project-title">LearnSphere</div>
+            <div class="project-subtitle">AI-Powered Learning Analytics System</div>
+            <p class="project-desc">
+              Predicts student performance using XGBoost and provides SHAP-powered explanations for educators. Real-time dashboards surface actionable intervention recommendations.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">ReactJS</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Supabase</span>
+              <span class="project-tag">XGBoost</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="projects.html" class="project-link">
+                <i class="fas fa-info-circle"></i> Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- NeoME -->
+        <div class="project-card reveal d2">
+          <div class="project-thumb">
+            <i class="fas fa-mobile-alt"></i>
+            <span class="project-thumb-label">NeoME — Wellness App</span>
+          </div>
+          <div class="project-body">
+            <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>Jan – May 2025</div>
+            <div class="project-title">NeoME</div>
+            <div class="project-subtitle">Gamified AI-Driven Wellness App</div>
+            <p class="project-desc">
+              A mobile wellness app that gamifies healthy habits with an AI companion powered by Gemini API. Features mood analytics, habit streaks, and personalized wellness nudges.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React Native</span>
+              <span class="project-tag">Expo</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Firebase</span>
+              <span class="project-tag">Gemini API</span>
+              <span class="project-tag">Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="projects.html" class="project-link">
+                <i class="fas fa-info-circle"></i> Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div style="margin-top:2rem;" class="reveal">
+        <a href="projects.html" class="view-more">View All Projects <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ACHIEVEMENTS HIGHLIGHT ═══ -->
+  <section class="section-sm sect-lavender" id="achievements-highlight">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Achievements</div>
+        <h2 class="section-title">Recent Highlights</h2>
+      </div>
+      <div class="achievements-list">
+        <div class="achievement-item reveal d1">
+          <div class="achievement-icon"><i class="fas fa-award"></i></div>
+          <div class="achievement-body">
+            <div class="achievement-title">13th TOPCIT Philippines — Level 2 Passer</div>
+            <div class="achievement-desc">Globally recognized ICT competency certification, demonstrating solid proficiency in software development.</div>
+          </div>
+          <div class="achievement-date">Dec 2025</div>
+        </div>
+        <div class="achievement-item reveal d2">
+          <div class="achievement-icon"><i class="fas fa-globe"></i></div>
+          <div class="achievement-body">
+            <div class="achievement-title">Harvard WorldMUN Social Venture Challenge — Semi-Finalist</div>
+            <div class="achievement-desc">Reached the semi-finals presenting a tech-driven social enterprise concept to an international panel.</div>
+          </div>
+          <div class="achievement-date">Mar 2025</div>
+        </div>
+        <div class="achievement-item reveal d3">
+          <div class="achievement-icon"><i class="fas fa-paint-brush"></i></div>
+          <div class="achievement-body">
+            <div class="achievement-title">UC ICT Congress 2025 UI/UX Competition — 2nd Place</div>
+            <div class="achievement-desc">Placed 2nd in UI/UX design, showcasing skills in user experience design and prototyping.</div>
+          </div>
+          <div class="achievement-date">Apr 2025</div>
+        </div>
+      </div>
+      <div style="margin-top:2rem;" class="reveal">
+        <a href="achievements.html" class="view-more">View All Achievements <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT CTA STRIP ═══ -->
+  <section class="section-sm section-alt sect-grape">
+    <div class="container">
+      <div class="cta-strip reveal">
+        <h2>Let's build something together.</h2>
+        <p>Whether it's a project, a role, or just a conversation — I'm always open to connecting.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="mailto:osabellowe@gmail.com" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> osabellowe@gmail.com
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            Go to Contact <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer sect-grape">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Lowela O. Villadolid</p>
+        <div class="footer-socials">
+          <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-note">Built with passion in Cebu 🇵🇭</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ TOUR OVERLAY (first-visit only) ═══ -->
+  <div id="tour-overlay" aria-hidden="true">
+    <div id="tour-highlight"></div>
+    <div id="tour-tooltip" role="dialog" aria-modal="true" aria-label="Site tour">
+      <div class="tour-progress">
+        <div class="tour-dot active"></div>
+        <div class="tour-dot"></div>
+        <div class="tour-dot"></div>
+        <div class="tour-dot"></div>
+        <div class="tour-dot"></div>
+      </div>
+      <div class="tour-step-label" id="tour-step-num">Step 1 of 5</div>
+      <div class="tour-title" id="tour-title">Welcome!</div>
+      <div class="tour-desc" id="tour-desc">Let me show you around.</div>
+      <div class="tour-actions">
+        <button class="tour-btn tour-btn-ghost" id="tour-prev" style="display:none;">← Prev</button>
+        <button class="tour-btn tour-btn-primary" id="tour-next">Next →</button>
+        <button class="tour-btn tour-btn-ghost tour-btn-skip" id="tour-skip">Skip</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

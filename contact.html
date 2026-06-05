@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Lowela Villadolid — osabellowe@gmail.com · GitHub laloweeee · LinkedIn lowela-villadolid" />
+  <title>Contact — Lowela O. Villadolid</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">LOV</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="navMobileMenu">
+    <button class="nav-mobile-close" id="navMobileClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <div class="page-hero sect-grape">
+    <div class="container">
+      <div class="section-tag reveal">Get in Touch</div>
+      <h1 class="page-hero-title reveal">Let's Connect</h1>
+      <p class="page-hero-sub reveal">Open to entry-level roles, collaborations, and conversations about tech.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section section-alt sect-lavender">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- ─── Left: Contact Info ─── -->
+          <div>
+            <div class="reveal">
+              <div class="section-tag" style="margin-bottom:1.5rem;">Contact Details</div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-info-text">
+                  <strong>Email</strong>
+                  <a href="mailto:osabellowe@gmail.com">osabellowe@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                <div class="contact-info-text">
+                  <strong>Phone</strong>
+                  <span>(+63) 912 678 9638</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-info-text">
+                  <strong>Location</strong>
+                  <span>Canjulao, Lapu-Lapu City, Cebu 🇵🇭</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fab fa-github"></i></div>
+                <div class="contact-info-text">
+                  <strong>GitHub</strong>
+                  <a href="https://github.com/laloweeee" target="_blank" rel="noopener">github.com/laloweeee</a>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="fab fa-linkedin"></i></div>
+                <div class="contact-info-text">
+                  <strong>LinkedIn</strong>
+                  <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener">linkedin.com/in/lowela-villadolid/</a>
+                </div>
+              </div>
+
+              <div class="contact-socials">
+                <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:osabellowe@gmail.com" class="social-btn" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+639126789638" class="social-btn" aria-label="Phone">
+                  <i class="fas fa-phone"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Map placeholder -->
+            <div class="map-placeholder reveal" style="margin-top:2rem;">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Lapu-Lapu City, Cebu, Philippines</span>
+              <span style="font-size:0.8rem; color:var(--border-h);">📍 6015</span>
+            </div>
+          </div>
+
+          <!-- ─── Right: Contact Form ─── -->
+          <div class="reveal">
+            <div class="contact-form">
+              <div class="section-tag" style="margin-bottom:1.5rem;">Send a Message</div>
+              <form id="contactForm" novalidate>
+                <div class="form-fields">
+                  <div class="form-group">
+                    <label for="contactName">Your Name</label>
+                    <input
+                      type="text" id="contactName" name="name"
+                      class="form-control" placeholder="Jane Doe"
+                      required autocomplete="name"
+                      maxlength="100"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input
+                      type="email" id="contactEmail" name="email"
+                      class="form-control" placeholder="jane@company.com"
+                      required autocomplete="email"
+                      maxlength="254"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="contactSubject">Subject</label>
+                    <input
+                      type="text" id="contactSubject" name="subject"
+                      class="form-control" placeholder="Job opportunity / Collaboration / Just saying hi"
+                      maxlength="200"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea
+                      id="contactMessage" name="message"
+                      class="form-control" rows="5"
+                      placeholder="Tell me about the opportunity, project, or just say hello..."
+                      required
+                      maxlength="2000"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                  </button>
+                </div>
+
+                <div class="form-success">
+                  <i class="fas fa-check-circle"></i>
+                  <h3>Message sent!</h3>
+                  <p>Thanks for reaching out. I'll get back to you as soon as I can.</p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA strip -->
+    <section class="section-sm sect-grape">
+      <div class="container">
+        <div class="cta-strip reveal">
+          <h2>Let's build something together.</h2>
+          <p>I'm actively seeking entry-level opportunities in software engineering and AI/ML. Let's talk!</p>
+          <a href="mailto:osabellowe@gmail.com" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> osabellowe@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer sect-grape">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Lowela O. Villadolid</p>
+        <div class="footer-socials">
+          <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-note">Built with passion in Cebu 🇵🇭</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
