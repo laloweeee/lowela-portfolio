@@ -18,7 +18,7 @@
   <!-- ═══ NAVBAR ═══ -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">LOV</a>
+      <a href="index.html" class="nav-logo">My Portfolio</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -33,15 +33,31 @@
     </div>
   </nav>
 
-  <!-- Mobile menu -->
-  <div class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
-    <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="contact.html">Contact</a>
+  <!-- Mobile menu backdrop -->
+  <div class="nav-mobile-backdrop" id="navMobileBackdrop"></div>
+
+  <!-- Mobile menu drawer -->
+  <div class="nav-mobile-menu" id="navMobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="nav-mobile-header">
+      <span class="nav-mobile-brand">LOV</span>
+      <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="nav-mobile-links">
+      <a href="index.html" style="transition-delay:0.06s"><span class="menu-icon"><i class="fas fa-home"></i></span>Home</a>
+      <a href="about.html" style="transition-delay:0.10s"><span class="menu-icon"><i class="fas fa-user"></i></span>About Me</a>
+      <a href="skills.html" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
+      <a href="projects.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
+      <a href="achievements.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
+      <a href="contact.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+    </nav>
+    <div class="nav-mobile-footer">
+      <span class="nav-mobile-footer-label">Connect</span>
+      <div class="nav-mobile-socials">
+        <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
   </div>
 
   <!-- ═══ HERO ═══ -->
@@ -49,6 +65,7 @@
     <div class="hero-glow hero-glow-1"></div>
     <div class="hero-glow hero-glow-2"></div>
     <div class="container">
+      <div class="hero-inner">
       <div class="hero-content">
         <div class="hero-badge">
           <span class="dot"></span>
@@ -59,52 +76,37 @@
           <span id="typedRole"></span><span class="typed-cursor"></span>
         </div>
         <p class="hero-desc">
-          I build thoughtful software — from predictive ML engines to gamified mobile apps.
+          Computer Science student with hands-on experience in system analysis, technical implementation, and software development, seeking an entry-level role in the tech industry. Eager to contribute through a detail-oriented and results-driven approach to building solutions and delivering successful outcomes in a collaborative professional environment.
         </p>
         <div class="hero-btns" id="hero-btns">
           <a href="projects.html" class="btn btn-primary">
             <i class="fas fa-rocket"></i> View My Work
           </a>
-          <a href="assets/lowela-villadolid-resume.pdf" class="btn btn-outline" download>
+          <a href="assets/files/Villadolid-Resume.pdf" class="btn btn-outline" download="Villadolid-Resume.pdf">
             <i class="fas fa-download"></i> Download Résumé
           </a>
         </div>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <div class="stat-num">3</div>
-            <div class="stat-label">Traineeships</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">2</div>
-            <div class="stat-label">Capstone Projects</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">7+</div>
-            <div class="stat-label">Languages</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">Magna</div>
-            <div class="stat-label">Cum Laude Candidate</div>
-          </div>
-        </div>
+
+      </div><!-- /.hero-content -->
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="assets/images/finalgradpic.png" alt="Lowela O. Villadolid" />
       </div>
+      </div><!-- /.hero-inner -->
     </div>
   </section>
-
-  <!-- ═══ ABOUT SNAPSHOT ═══ -->
   <section class="section-sm section-alt sect-grape">
     <div class="container">
       <div class="about-snap reveal">
         <div class="section-tag">About Me</div>
         <p style="font-size:1.05rem; color:var(--text-sec); line-height:1.75; margin-bottom:0;">
-          I'm a CS graduate from UCLM with hands-on experience across full-stack development, AI/ML systems, SAP ABAP, and ServiceNow.
+          I'm a Computer Science student from UCLM with hands-on experience across full-stack development, AI/ML systems, SAP ABAP, and ServiceNow.
           I've trained at <strong style="color:var(--text)">Accenture</strong>, <strong style="color:var(--text)">Alliance Software Inc.</strong>, and <strong style="color:var(--text)">Rococo Global Technologies</strong> — bringing a detail-oriented, results-driven approach to every project.
         </p>
         <div class="about-snap-chips">
-          <span class="chip">🎓 Magna Cum Laude Candidate</span>
+          <span class="chip">🎓 Magna Cum Laude</span>
+          <span class="chip">🏅 Ranked 3 Among All Graduates</span>
           <span class="chip">📚 Dean's Lister</span>
-          <span class="chip">🏫 UCLM, Class of 2026</span>
-          <span class="chip">✍️ Associate Editor-in-Chief</span>
+          <span class="chip">🏫 Academic Scholar</span>
         </div>
         <a href="about.html" class="view-more">Read More <i class="fas fa-arrow-right"></i></a>
       </div>
@@ -163,9 +165,8 @@
 
         <!-- LearnSphere -->
         <div class="project-card reveal d1">
-          <div class="project-thumb">
-            <i class="fas fa-chart-line"></i>
-            <span class="project-thumb-label">LearnSphere — Learning Analytics</span>
+          <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+            <img src="assets/images/Learnsphere.png" alt="LearnSphere" style="width:100%; height:100%; object-fit:cover;" />
           </div>
           <div class="project-body">
             <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>Dec 2025 – May 2026</div>
@@ -183,11 +184,8 @@
               <span class="project-tag">Python</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="project-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="projects.html" class="project-link">
-                <i class="fas fa-info-circle"></i> Details
+              <a href="https://www.learnsphereph.com/" target="_blank" rel="noopener" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
               </a>
             </div>
           </div>
@@ -195,9 +193,8 @@
 
         <!-- NeoME -->
         <div class="project-card reveal d2">
-          <div class="project-thumb">
-            <i class="fas fa-mobile-alt"></i>
-            <span class="project-thumb-label">NeoME — Wellness App</span>
+          <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+            <img src="assets/images/NeoME.png" alt="NeoME" style="width:100%; height:100%; object-fit:cover;" />
           </div>
           <div class="project-body">
             <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>Jan – May 2025</div>
@@ -215,15 +212,41 @@
               <span class="project-tag">Flask</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="project-link">
+              <a href="https://github.com/laloweeee/neomeproject.git" target="_blank" rel="noopener" class="project-link">
                 <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="projects.html" class="project-link">
-                <i class="fas fa-info-circle"></i> Details
               </a>
             </div>
           </div>
         </div>
+
+        <!-- CareerLens AI -->
+        <div class="project-card reveal d3">
+          <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+            <img src="assets/images/CareerLensAI.png" alt="CareerLens AI" style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+          <div class="project-body">
+            <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2025</div>
+            <div class="project-title">CareerLens AI</div>
+            <div class="project-subtitle">AI-Powered Resume Coach & Career Assistant</div>
+            <p class="project-desc">
+              A RAG-powered career assistant that scores resumes, rewrites them for target roles, generates tailored cover letters, and answers career questions — all grounded in the user's actual resume.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">LLaMA 3.3 70B</span>
+              <span class="project-tag">FAISS</span>
+              <span class="project-tag">RAG</span>
+              <span class="project-tag">Groq</span>
+            </div>
+            <div class="project-links">
+              <a href="https://careerlens-ai-production.up.railway.app/" target="_blank" rel="noopener" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
 
       </div>
       <div style="margin-top:2rem;" class="reveal">
@@ -277,7 +300,7 @@
       <div class="cta-strip reveal">
         <h2>Let's build something together.</h2>
         <p>Whether it's a project, a role, or just a conversation — I'm always open to connecting.</p>
-        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <div class="cta-btns">
           <a href="mailto:osabellowe@gmail.com" class="btn btn-primary">
             <i class="fas fa-envelope"></i> osabellowe@gmail.com
           </a>
@@ -327,5 +350,52 @@
   </div>
 
   <script src="js/main.js"></script>
+
+  <!-- ── Mobile menu patch: new drawer behaviour ── -->
+  <script>
+  (function(){
+    var hamburger = document.getElementById('navHamburger');
+    var menu = document.getElementById('navMobileMenu');
+    var backdrop = document.getElementById('navMobileBackdrop');
+    var closeBtn = document.getElementById('navMobileClose');
+    if(!hamburger || !menu) return;
+
+    function openMenu(){
+      menu.classList.add('open');
+      if(backdrop) backdrop.classList.add('open');
+      hamburger.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      menu.removeAttribute('aria-hidden');
+    }
+    function closeMenu(){
+      menu.classList.remove('open');
+      if(backdrop) backdrop.classList.remove('open');
+      hamburger.classList.remove('is-open');
+      document.body.style.overflow = '';
+      menu.setAttribute('aria-hidden','true');
+    }
+
+    hamburger.addEventListener('click', function(e){
+      e.stopPropagation();
+      menu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if(backdrop) backdrop.addEventListener('click', closeMenu);
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+    });
+
+    // Mark active link
+    var links = menu.querySelectorAll('a[href]');
+    links.forEach(function(a){
+      if(a.getAttribute('href') === window.location.pathname.split('/').pop() ||
+         (window.location.pathname.endsWith('/') && a.getAttribute('href') === 'index.html')){
+        a.classList.add('active');
+      }
+    });
+  })();
+  </script>
 </body>
 </html>

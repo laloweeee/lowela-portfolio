@@ -31,14 +31,31 @@
       </button>
     </div>
   </nav>
-  <div class="nav-mobile-menu" id="navMobileMenu">
-    <button class="nav-mobile-close" id="navMobileClose">✕</button>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="contact.html">Contact</a>
+  <!-- Mobile menu backdrop -->
+  <div class="nav-mobile-backdrop" id="navMobileBackdrop"></div>
+
+  <!-- Mobile menu drawer -->
+  <div class="nav-mobile-menu" id="navMobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="nav-mobile-header">
+      <span class="nav-mobile-brand">LOV</span>
+      <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="nav-mobile-links">
+      <a href="index.html" style="transition-delay:0.06s"><span class="menu-icon"><i class="fas fa-home"></i></span>Home</a>
+      <a href="about.html" style="transition-delay:0.10s"><span class="menu-icon"><i class="fas fa-user"></i></span>About Me</a>
+      <a href="skills.html" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
+      <a href="projects.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
+      <a href="achievements.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
+      <a href="contact.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+    </nav>
+    <div class="nav-mobile-footer">
+      <span class="nav-mobile-footer-label">Connect</span>
+      <div class="nav-mobile-socials">
+        <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
   </div>
 
   <!-- ═══ PAGE HERO ═══ -->
@@ -214,5 +231,52 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- ── Mobile menu patch: new drawer behaviour ── -->
+  <script>
+  (function(){
+    var hamburger = document.getElementById('navHamburger');
+    var menu = document.getElementById('navMobileMenu');
+    var backdrop = document.getElementById('navMobileBackdrop');
+    var closeBtn = document.getElementById('navMobileClose');
+    if(!hamburger || !menu) return;
+
+    function openMenu(){
+      menu.classList.add('open');
+      if(backdrop) backdrop.classList.add('open');
+      hamburger.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      menu.removeAttribute('aria-hidden');
+    }
+    function closeMenu(){
+      menu.classList.remove('open');
+      if(backdrop) backdrop.classList.remove('open');
+      hamburger.classList.remove('is-open');
+      document.body.style.overflow = '';
+      menu.setAttribute('aria-hidden','true');
+    }
+
+    hamburger.addEventListener('click', function(e){
+      e.stopPropagation();
+      menu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if(backdrop) backdrop.addEventListener('click', closeMenu);
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+    });
+
+    // Mark active link
+    var links = menu.querySelectorAll('a[href]');
+    links.forEach(function(a){
+      if(a.getAttribute('href') === window.location.pathname.split('/').pop() ||
+         (window.location.pathname.endsWith('/') && a.getAttribute('href') === 'index.html')){
+        a.classList.add('active');
+      }
+    });
+  })();
+  </script>
 </body>
 </html>

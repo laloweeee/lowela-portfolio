@@ -3,52 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projects by Lowela Villadolid — LearnSphere AI Learning Analytics and NeoME Gamified Wellness App." />
+  <meta name="description" content="Projects by Lowela Villadolid — LearnSphere, NeoME, CareerLens AI, LoopTech, Whispering Palms, Bits &amp; Bytes, PowerShift, CNN Image Classifier, Bisaya Sentiment Analysis, LaAlliance, FruitStrike." />
   <title>Projects — Lowela O. Villadolid</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-  <style>
-    .project-full-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r-xl);
-      overflow: hidden;
-      margin-bottom: 3rem;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    .project-full-card:hover { border-color: var(--border-h); box-shadow: var(--sh-acc); }
-    .project-full-banner {
-      width: 100%; padding: 4rem 2.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      position: relative; overflow: hidden;
-      gap: 2rem;
-    }
-    .banner-text { position: relative; z-index: 1; }
-    .banner-icon { font-size: 6rem; color: rgba(246, 242, 255, 0.20); position: relative; z-index: 1; flex-shrink: 0; }
-    .project-full-body { padding: 2rem 2.5rem 2.5rem; }
-    .project-full-title { font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
-    .project-full-subtitle { font-size: 0.95rem; font-weight: 600; color: var(--accent); margin-bottom: 1.5rem; }
-    .project-full-section { margin-bottom: 1.75rem; }
-    .project-full-section-label {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem;
-    }
-    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
-    .feature-list li { display: flex; gap: 0.75rem; font-size: 0.9rem; color: var(--text-sec); line-height: 1.6; }
-    .feature-list li::before { content: '›'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
-    .project-full-meta {
-      display: flex; flex-wrap: wrap; gap: 1.5rem;
-      padding-top: 1.5rem; border-top: 1px solid var(--border);
-    }
-    .meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--muted); }
-    .meta-item i { color: var(--accent); }
-    @media (max-width: 600px) {
-      .project-full-banner { flex-direction: column; padding: 2.5rem 1.5rem; }
-      .banner-icon { font-size: 3.5rem; }
-      .project-full-body { padding: 1.5rem; }
-    }
-  </style>
 </head>
 <body>
 
@@ -72,14 +31,31 @@
       </button>
     </div>
   </nav>
-  <div class="nav-mobile-menu" id="navMobileMenu">
-    <button class="nav-mobile-close" id="navMobileClose">✕</button>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="contact.html">Contact</a>
+  <!-- Mobile menu backdrop -->
+  <div class="nav-mobile-backdrop" id="navMobileBackdrop"></div>
+
+  <!-- Mobile menu drawer -->
+  <div class="nav-mobile-menu" id="navMobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="nav-mobile-header">
+      <span class="nav-mobile-brand">LOV</span>
+      <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="nav-mobile-links">
+      <a href="index.html" style="transition-delay:0.06s"><span class="menu-icon"><i class="fas fa-home"></i></span>Home</a>
+      <a href="about.html" style="transition-delay:0.10s"><span class="menu-icon"><i class="fas fa-user"></i></span>About Me</a>
+      <a href="skills.html" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
+      <a href="projects.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
+      <a href="achievements.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
+      <a href="contact.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+    </nav>
+    <div class="nav-mobile-footer">
+      <span class="nav-mobile-footer-label">Connect</span>
+      <div class="nav-mobile-socials">
+        <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
   </div>
 
   <!-- ═══ PAGE HERO ═══ -->
@@ -93,127 +69,316 @@
 
   <main>
     <section class="section section-alt sect-lavender">
-      <div class="container" style="max-width:900px;">
+      <div class="container">
+        <div class="projects-grid">
 
-        <!-- ─── LearnSphere ─── -->
-        <div class="project-full-card reveal">
-          <div class="project-full-banner" style="background: #36255C;">
-            <div class="banner-text">
-              <div class="project-date" style="color:rgba(246,242,255,0.65); margin-bottom:0.5rem;">
-                <i class="fas fa-calendar-alt"></i> Dec 2025 – May 2026 · Capstone Project
-              </div>
-              <h2 style="color:#f6f2ff; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:800; margin-bottom:0.3rem;">LearnSphere</h2>
-              <p style="color:rgba(246,242,255,0.72); font-size:0.95rem; font-weight:600;">AI-Powered Learning Analytics System</p>
+          <!-- ─── LearnSphere ─── -->
+          <div class="project-card reveal d1">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/Learnsphere.png" alt="LearnSphere" style="width:100%; height:100%; object-fit:cover;" />
             </div>
-            <div class="banner-icon"><i class="fas fa-chart-line"></i></div>
-          </div>
-          <div class="project-full-body">
-            <div class="project-full-section">
-              <div class="project-full-section-label">Overview</div>
-              <p style="color:var(--text-sec); font-size:0.9rem; line-height:1.75;">
-                LearnSphere is a comprehensive learning analytics platform designed to help educators identify at-risk students and personalize interventions. It uses an <strong style="color:var(--text)">XGBoost</strong> model to predict student performance from behavioral and academic data, and <strong style="color:var(--text)">SHAP (SHapley Additive exPlanations)</strong> to make the predictions interpretable and actionable for instructors — not just a black box.
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>Dec 2025 – May 2026</div>
+              <div class="project-title">LearnSphere</div>
+              <div class="project-subtitle">AI-Powered Learning Analytics System</div>
+              <p class="project-desc">
+                Predicts student performance using XGBoost and provides SHAP-powered explanations for educators. Real-time dashboards surface actionable intervention recommendations.
               </p>
-            </div>
-            <div class="project-full-section">
-              <div class="project-full-section-label">Key Features</div>
-              <ul class="feature-list">
-                <li>Predictive analytics engine using XGBoost trained on student engagement, grades, and activity data</li>
-                <li>SHAP-powered explanations visualizing which factors most influence each student's predicted outcome</li>
-                <li>Real-time educator dashboard with drill-down views per student, class, and cohort</li>
-                <li>Automated intervention recommendations based on risk level and identified risk factors</li>
-                <li>Supabase-powered backend with Row Level Security for student data privacy</li>
-                <li>FastAPI RESTful backend serving ML inference endpoints with sub-200ms response times</li>
-                <li>Responsive ReactJS frontend with TypeScript for type-safe UI development</li>
-              </ul>
-            </div>
-            <div class="project-full-section">
-              <div class="project-full-section-label">Tech Stack</div>
-              <div class="project-tags" style="margin-bottom:0;">
+              <div class="project-tags">
                 <span class="project-tag">ReactJS</span>
                 <span class="project-tag">TypeScript</span>
-                <span class="project-tag">TailwindCSS</span>
                 <span class="project-tag">FastAPI</span>
-                <span class="project-tag">Python</span>
-                <span class="project-tag">XGBoost</span>
-                <span class="project-tag">SHAP</span>
                 <span class="project-tag">Supabase</span>
-                <span class="project-tag">PostgreSQL</span>
-                <span class="project-tag">Pandas</span>
-                <span class="project-tag">Scikit-learn</span>
+                <span class="project-tag">XGBoost</span>
+                <span class="project-tag">Python</span>
               </div>
-            </div>
-            <div class="project-full-meta">
-              <div class="meta-item"><i class="fas fa-code-branch"></i> Capstone Project</div>
-              <div class="meta-item"><i class="fas fa-users"></i> Team of 2</div>
-              <div class="meta-item"><i class="fas fa-calendar"></i> Dec 2025 – May 2026</div>
-              <div style="margin-left:auto;">
-                <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-                  <i class="fab fa-github"></i> View on GitHub
+              <div class="project-links">
+                <a href="https://www.learnsphereph.com/" target="_blank" rel="noopener" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
                 </a>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- ─── NeoME ─── -->
-        <div class="project-full-card reveal">
-          <div class="project-full-banner" style="background: #36255C;">
-            <div class="banner-text">
-              <div class="project-date" style="color:rgba(246,242,255,0.65); margin-bottom:0.5rem;">
-                <i class="fas fa-calendar-alt"></i> Jan – May 2025 · Capstone Project
-              </div>
-              <h2 style="color:#f6f2ff; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:800; margin-bottom:0.3rem;">NeoME</h2>
-              <p style="color:rgba(246,242,255,0.72); font-size:0.95rem; font-weight:600;">Gamified AI-Driven Wellness App</p>
+          <!-- ─── NeoME ─── -->
+          <div class="project-card reveal d2">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/NeoME.png" alt="NeoME" style="width:100%; height:100%; object-fit:cover;" />
             </div>
-            <div class="banner-icon"><i class="fas fa-mobile-alt"></i></div>
-          </div>
-          <div class="project-full-body">
-            <div class="project-full-section">
-              <div class="project-full-section-label">Overview</div>
-              <p style="color:var(--text-sec); font-size:0.9rem; line-height:1.75;">
-                NeoME is a cross-platform mobile wellness application that makes healthy habits engaging through gamification. At its core is an <strong style="color:var(--text)">AI wellness companion</strong> powered by Google's Gemini API, offering conversational check-ins, mood analysis, and personalized wellness nudges. Users earn streaks, badges, and rewards for maintaining healthy routines.
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>Jan – May 2025</div>
+              <div class="project-title">NeoME</div>
+              <div class="project-subtitle">Gamified AI-Driven Wellness App</div>
+              <p class="project-desc">
+                A mobile wellness app that gamifies healthy habits with an AI companion powered by Gemini API. Features mood analytics, habit streaks, and personalized wellness nudges.
               </p>
-            </div>
-            <div class="project-full-section">
-              <div class="project-full-section-label">Key Features</div>
-              <ul class="feature-list">
-                <li>AI-powered wellness companion using Gemini API for natural conversation, mood journaling, and personalized advice</li>
-                <li>Gamified habit tracker with streaks, experience points, badges, and a visual progression system</li>
-                <li>Mood analytics dashboard with historical trends and pattern recognition</li>
-                <li>Personalized wellness recommendations generated from user behavior and mood history via Flask ML backend</li>
-                <li>Firebase Authentication and Firestore for real-time sync across devices</li>
-                <li>Push notifications for habit reminders and wellness check-in prompts</li>
-                <li>Smooth, native-feeling UI built with React Native and Expo for iOS and Android</li>
-              </ul>
-            </div>
-            <div class="project-full-section">
-              <div class="project-full-section-label">Tech Stack</div>
-              <div class="project-tags" style="margin-bottom:0;">
+              <div class="project-tags">
                 <span class="project-tag">React Native</span>
                 <span class="project-tag">Expo</span>
                 <span class="project-tag">TypeScript</span>
-                <span class="project-tag">Flask</span>
-                <span class="project-tag">Python</span>
                 <span class="project-tag">Firebase</span>
-                <span class="project-tag">Firestore</span>
-                <span class="project-tag">Google Gemini API</span>
-                <span class="project-tag">Expo Notifications</span>
-                <span class="project-tag">AsyncStorage</span>
+                <span class="project-tag">Gemini API</span>
+                <span class="project-tag">Flask</span>
               </div>
-            </div>
-            <div class="project-full-meta">
-              <div class="meta-item"><i class="fas fa-code-branch"></i> Capstone Project</div>
-              <div class="meta-item"><i class="fas fa-users"></i> Team of 2</div>
-              <div class="meta-item"><i class="fas fa-calendar"></i> Jan – May 2025</div>
-              <div style="margin-left:auto;">
-                <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
-                  <i class="fab fa-github"></i> View on GitHub
+              <div class="project-links">
+                <a href="https://github.com/laloweeee" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> GitHub
                 </a>
               </div>
             </div>
           </div>
-        </div>
 
+          <!-- ─── CareerLens AI ─── -->
+          <div class="project-card reveal d3">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/CareerLensAI.png" alt="CareerLens AI" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2025</div>
+              <div class="project-title">CareerLens AI</div>
+              <div class="project-subtitle">AI-Powered Resume Coach & Career Assistant</div>
+              <p class="project-desc">
+                A RAG-powered career assistant that scores resumes, rewrites them for target roles, generates tailored cover letters, and answers career questions — all grounded in the user's actual resume.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">LLaMA 3.3 70B</span>
+                <span class="project-tag">FAISS</span>
+                <span class="project-tag">RAG</span>
+                <span class="project-tag">Groq</span>
+              </div>
+              <div class="project-links">
+                <a href="https://careerlens-ai-production.up.railway.app/" target="_blank" rel="noopener" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── LoopTech ─── -->
+          <div class="project-card reveal d4">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/Looptech.png" alt="LoopTech" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2025</div>
+              <div class="project-title">LoopTech</div>
+              <div class="project-subtitle">Gamified Coding Platform with AI Mood Detection</div>
+              <p class="project-desc">
+                A coding & digital literacy platform with gamification, social features, and real-time collaboration. For solo challenges, users can enable their camera — the platform detects facial expressions in real time and sends personalized motivational quotes, hints, and suggestions based on their mood while coding.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Gamification</span>
+                <span class="project-tag">Real-time Collab</span>
+                <span class="project-tag">Facial Recognition</span>
+                <span class="project-tag">AI / Mood Detection</span>
+                <span class="project-tag">Digital Literacy</span>
+              </div>
+              <div class="project-links">
+                <a href="https://looptech-beta.vercel.app/" target="_blank" rel="noopener" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── Whispering Palms ─── -->
+          <div class="project-card reveal d5">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/Whispering.png" alt="Whispering Palms Resort" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2024</div>
+              <div class="project-title">Whispering Palms Resort</div>
+              <div class="project-subtitle">Full-Featured Resort Management System</div>
+              <p class="project-desc">
+                An end-to-end resort management system for both guests and staff. Guests can browse and book accommodations, reserve activities, and place orders from the in-resort menu — all from one platform. Admins get a dedicated dashboard to manage reservations, track room and activity availability, process orders, and oversee day-to-day resort operations.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Java</span>
+                <span class="project-tag">OOP</span>
+                <span class="project-tag">Booking System</span>
+                <span class="project-tag">Admin Dashboard</span>
+                <span class="project-tag">Resort Management</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/laloweeee/Whispering-Palms-Resort.git" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── Bits & Bytes ─── -->
+          <div class="project-card reveal d6">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/BitsBytes.png" alt="Bits &amp; Bytes Management System" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2023</div>
+              <div class="project-title">Bits &amp; Bytes Management System</div>
+              <div class="project-subtitle">Publication Org Management Platform — CCS, UCLM</div>
+              <p class="project-desc">
+                The dedicated internal platform for Bits &amp; Bytes, the official publication of the College of Computer Studies at UCLM. Built to replace scattered spreadsheets and manual tracking, the system gives members a unified hub for event planning, scheduling, budget management, to-do lists, and attendance tracking — keeping the entire org running with clarity and efficiency.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Java</span>
+                <span class="project-tag">OOP</span>
+                <span class="project-tag">Event Planning</span>
+                <span class="project-tag">Budget Management</span>
+                <span class="project-tag">Attendance Tracking</span>
+                <span class="project-tag">Org Management</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/laloweeee/Bits-Bytes-Management-System.git" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── PowerShift ─── -->
+          <div class="project-card reveal d6">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/Powershift.png" alt="PowerShift" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2025</div>
+              <div class="project-title">PowerShift</div>
+              <div class="project-subtitle">AI-Powered Energy Tracking Mobile App — UI/UX Design</div>
+              <p class="project-desc">
+                A Figma-designed mobile app that helps everyday households — students, families, and renters — take control of their electricity bills and carbon footprint without needing a smart meter. Users scan their electric bills and AI analyzes consumption patterns, peak hours, appliance usage, and weather-related spikes to surface personalized energy-saving recommendations, a savings estimator, carbon impact insights, and smart goal tracking to drive real behavior change.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Figma</span>
+                <span class="project-tag">UI/UX Design</span>
+                <span class="project-tag">Mobile App</span>
+                <span class="project-tag">AI-Powered</span>
+                <span class="project-tag">Energy Tracking</span>
+                <span class="project-tag">Sustainability</span>
+              </div>
+              <div class="project-links">
+                <a href="https://www.figma.com/proto/zcY1Whe8tfmR7rH2cGU8Ix/UI-UX-PRACTICE?node-id=171-1410&t=tEvvZ9fnENw2T5XR-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=180%3A767&show-proto-sidebar=1" target="_blank" rel="noopener" class="project-link">
+                  <i class="fas fa-paint-brush"></i> Figma Prototype
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── CNN Image Recognition ─── -->
+          <div class="project-card reveal d6">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/ImageRecognition.png" alt="CNN Image Recognition — Cats vs. Dogs" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2024</div>
+              <div class="project-title">CNN Image Classifier</div>
+              <div class="project-subtitle">Cats vs. Dogs — Deep Learning with TensorFlow/Keras</div>
+              <p class="project-desc">
+                A convolutional neural network built from scratch to classify images as cats or dogs. The model leverages multiple convolutional and pooling layers for hierarchical feature extraction — detecting edges and textures in early layers, then progressively learning complex patterns like ears, snouts, and fur. Trained and evaluated in Google Colab using TensorFlow/Keras, with data augmentation and dropout regularization to improve generalization and push classification accuracy.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">TensorFlow</span>
+                <span class="project-tag">Keras</span>
+                <span class="project-tag">CNN</span>
+                <span class="project-tag">Deep Learning</span>
+                <span class="project-tag">Image Classification</span>
+                <span class="project-tag">Google Colab</span>
+              </div>
+              <div class="project-links">
+                <a href="https://colab.research.google.com/drive/1ycVhMywclnNLfygbfw5URU9JSJ2xK1W2?usp=sharing" target="_blank" rel="noopener" class="project-link">
+                  <i class="fas fa-book-open"></i> Colab Notebook
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── Bisaya Sentiment Analysis ─── -->
+          <div class="project-card reveal d6">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/Sentiment.png" alt="Bisaya Sentiment Analysis" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2024</div>
+              <div class="project-title">Bisaya Sentiment Analysis</div>
+              <div class="project-subtitle">Fine-Tuned NLP Model for Low-Resource Cebuano Text</div>
+              <p class="project-desc">
+                Fine-tuned a pre-trained AI language model for sentiment analysis on Bisaya (Cebuano) text — a low-resource language underrepresented in mainstream NLP datasets. Handled end-to-end data collection, labeling, and preprocessing to build a quality training corpus, then fine-tuned the model to significantly improve classification accuracy on real-world Bisaya text. Supports the growing need for localized, culturally aware NLP tools in the Philippine context.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">NLP</span>
+                <span class="project-tag">Fine-Tuning</span>
+                <span class="project-tag">Sentiment Analysis</span>
+                <span class="project-tag">Bisaya / Cebuano</span>
+                <span class="project-tag">Data Collection</span>
+                <span class="project-tag">Google Colab</span>
+              </div>
+              <div class="project-links">
+                <a href="https://colab.research.google.com/drive/1H131tl96Mo9VfsWzPSzP59MVn0UGRI7Q?usp=sharing" target="_blank" rel="noopener" class="project-link">
+                  <i class="fas fa-book-open"></i> Colab Notebook
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── LaAlliance ─── -->
+          <div class="project-card reveal d6">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/LaAlliance.jpeg" alt="LaAlliance Food Ordering System" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2025</div>
+              <div class="project-title">LaAlliance</div>
+              <div class="project-subtitle">Multi-Role Food Ordering & Restaurant Management System</div>
+              <p class="project-desc">
+                A fully integrated food ordering ecosystem serving three distinct roles. Customers can browse restaurants, customize meals, and choose between delivery, pickup, or dine-in. Restaurant owners manage incoming orders, update inventory in real time, and process payments for both digital and walk-in customers. An admin layer oversees the entire platform — vetting new restaurant partners, coordinating promotions, monitoring multi-location performance, and maintaining system integrity.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">C#</span>
+                <span class="project-tag">Razor MVC</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">Azure Blob Storage</span>
+                <span class="project-tag">Visual Studio</span>
+                <span class="project-tag">Figma</span>
+                <span class="project-tag">Mailtrap</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/laloweeee/LaAlliance.git" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── FruitStrike ─── -->
+          <div class="project-card reveal d6">
+            <div class="project-thumb" style="padding:0; overflow:hidden; height:200px;">
+              <img src="assets/images/FruitStrike.png" alt="FruitStrike" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="project-body">
+              <div class="project-date"><i class="fas fa-calendar-alt" style="margin-right:0.3rem;"></i>2024</div>
+              <div class="project-title">FruitStrike</div>
+              <div class="project-subtitle">Probability-Based Fruit Hunting Game</div>
+              <p class="project-desc">
+                A browser-based fruit hunting game built in Scratch where players hunt for fruits governed by probability mechanics — each fruit's appearance and behavior is driven by randomized chance, making every round unpredictable and replayable.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Scratch</span>
+                <span class="project-tag">Game Design</span>
+                <span class="project-tag">Probability</span>
+              </div>
+              <div class="project-links">
+                <a href="https://scratch.mit.edu/projects/945725868/fullscreen/" target="_blank" rel="noopener" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
@@ -234,5 +399,52 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- ── Mobile menu patch: new drawer behaviour ── -->
+  <script>
+  (function(){
+    var hamburger = document.getElementById('navHamburger');
+    var menu = document.getElementById('navMobileMenu');
+    var backdrop = document.getElementById('navMobileBackdrop');
+    var closeBtn = document.getElementById('navMobileClose');
+    if(!hamburger || !menu) return;
+
+    function openMenu(){
+      menu.classList.add('open');
+      if(backdrop) backdrop.classList.add('open');
+      hamburger.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      menu.removeAttribute('aria-hidden');
+    }
+    function closeMenu(){
+      menu.classList.remove('open');
+      if(backdrop) backdrop.classList.remove('open');
+      hamburger.classList.remove('is-open');
+      document.body.style.overflow = '';
+      menu.setAttribute('aria-hidden','true');
+    }
+
+    hamburger.addEventListener('click', function(e){
+      e.stopPropagation();
+      menu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if(backdrop) backdrop.addEventListener('click', closeMenu);
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+    });
+
+    // Mark active link
+    var links = menu.querySelectorAll('a[href]');
+    links.forEach(function(a){
+      if(a.getAttribute('href') === window.location.pathname.split('/').pop() ||
+         (window.location.pathname.endsWith('/') && a.getAttribute('href') === 'index.html')){
+        a.classList.add('active');
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
