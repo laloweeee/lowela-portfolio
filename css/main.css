@@ -335,7 +335,7 @@ h1,h2,h3,h4,h5 { font-family:var(--font-h); line-height:1.15; font-weight:700; }
 }
 .hero-content { position:relative; z-index:1; width:100%; }
 .hero-photo-wrap {
-  flex-shrink:0; width:190px;
+  flex-shrink:0; width:230px;
   position:relative; z-index:1;
 }
 .hero-photo {
