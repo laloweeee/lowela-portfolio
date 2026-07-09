@@ -21,6 +21,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html#experience-highlight">Experience</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="achievements.html">Achievements</a></li>
@@ -37,23 +38,24 @@
   <!-- Mobile menu drawer -->
   <div class="nav-mobile-menu" id="navMobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <div class="nav-mobile-header">
-      <span class="nav-mobile-brand">LOV</span>
+      <span class="nav-mobile-brand">My Portfolio</span>
       <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
     </div>
     <nav class="nav-mobile-links">
       <a href="index.html" style="transition-delay:0.06s"><span class="menu-icon"><i class="fas fa-home"></i></span>Home</a>
       <a href="about.html" style="transition-delay:0.10s"><span class="menu-icon"><i class="fas fa-user"></i></span>About Me</a>
-      <a href="skills.html" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
-      <a href="projects.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
-      <a href="achievements.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
-      <a href="contact.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+      <a href="index.html#experience-highlight" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-briefcase"></i></span>Experience</a>
+      <a href="skills.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
+      <a href="projects.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
+      <a href="achievements.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
+      <a href="contact.html" style="transition-delay:0.30s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
     </nav>
     <div class="nav-mobile-footer">
       <span class="nav-mobile-footer-label">Connect</span>
       <div class="nav-mobile-socials">
         <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
@@ -63,7 +65,7 @@
     <div class="container">
       <div class="section-tag reveal">About Me</div>
       <h1 class="page-hero-title reveal">The Person Behind the Code</h1>
-      <p class="page-hero-sub reveal">CS student, problem solver, and lifelong learner based in Cebu, Philippines.</p>
+      <p class="page-hero-sub reveal">Computer Science student, problem solver, and lifelong learner based in Cebu, Philippines.</p>
     </div>
   </div>
 
@@ -73,85 +75,64 @@
       <div class="container">
         <div class="about-grid">
 
-          <!-- Left: Photo + Fun Facts -->
+          <!-- Left: Photo + What I'm Looking For -->
           <div class="about-photo-wrap reveal-left">
             <div class="about-photo">
               <img src="assets/images/finalgradpic.png" alt="Lowela O. Villadolid" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;" />
             </div>
-            <div class="fun-facts">
-              <div class="fun-fact">
-                <div class="fun-fact-icon">☕</div>
-                <div class="fun-fact-title">Fueled by Coffee</div>
-                <div class="fun-fact-text">Best code is written at 11pm with a cup of coffee and lo-fi beats.</div>
-              </div>
-              <div class="fun-fact">
-                <div class="fun-fact-icon">📖</div>
-                <div class="fun-fact-title">Avid Reader</div>
-                <div class="fun-fact-text">Loves diving into tech blogs, research papers, and the occasional novel.</div>
-              </div>
-              <div class="fun-fact">
-                <div class="fun-fact-icon">🎮</div>
-                <div class="fun-fact-title">Gamer at Heart</div>
-                <div class="fun-fact-text">Games inspired NeoME — good UX should feel as engaging as a great game.</div>
-              </div>
-              <div class="fun-fact">
-                <div class="fun-fact-icon">🌱</div>
-                <div class="fun-fact-title">Always Learning</div>
-                <div class="fun-fact-text">Currently exploring LLM fine-tuning and cloud-native architectures.</div>
-              </div>
+            <div class="card reveal about-looking-for" style="margin-top:1.5rem;">
+              <div class="skill-category-title"><i class="fas fa-search"></i> What I'm Looking For</div>
+              <p style="color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:1rem;">
+                Entry-level roles in software engineering, full-stack development, and platform delivery. I'm particularly excited about products that create real-world impact, and teams where I can grow, learn fast, and contribute meaningfully from day one.
+              </p>
+              <a href="contact.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-paper-plane"></i> Get in Touch
+              </a>
             </div>
           </div>
 
           <!-- Right: Bio + Education -->
-          <div>
-            <div class="reveal">
+          <div class="about-right-wrap">
+            <div class="reveal about-bio-block">
               <div class="section-tag">Full Bio</div>
-              <h2 class="section-title" style="margin-bottom:1.5rem;">Hey, I'm Lowela 👋</h2>
+              <h2 class="section-title" style="margin-bottom:1.5rem;">Hi, I'm Lowela</h2>
               <p style="color:var(--text-sec); line-height:1.8; font-size:1rem; margin-bottom:1.25rem;">
-                I'm a Computer Science graduate from the University of Cebu Lapu-Lapu and Mandaue (UCLM), graduating Magna Cum Laude in June 2026. I have hands-on experience across <strong style="color:var(--text)">full-stack development</strong>, <strong style="color:var(--text)">AI/ML systems</strong>, <strong style="color:var(--text)">SAP ABAP</strong>, and <strong style="color:var(--text)">ServiceNow platform</strong>.
+                I am a Computer Science graduate from the University of Cebu Lapu-Lapu and Mandaue (UCLM), where I graduated Magna Cum Laude in June 2026. I have hands-on experience across full-stack development, AI/ML systems, SAP ABAP, and ServiceNow platform.
               </p>
               <p style="color:var(--text-sec); line-height:1.8; font-size:1rem; margin-bottom:1.25rem;">
-                I've trained at <strong style="color:var(--text)">Accenture</strong> (SAP ABAP), <strong style="color:var(--text)">Alliance Software Inc.</strong> (Full-Stack Technical Lead), and <strong style="color:var(--text)">Rococo Global Technologies</strong> (ServiceNow) — each experience sharpening my ability to work in professional, agile environments.
+                I've trained at Accenture (SAP ABAP), Alliance Software Inc., and Rococo Global Technologies (ServiceNow) — each experience sharpening my ability to work in professional, agile environments.
               </p>
+              <!--
               <p style="color:var(--text-sec); line-height:1.8; font-size:1rem; margin-bottom:2rem;">
-                Beyond coding, I serve as <strong style="color:var(--text)">Associate Editor-in-Chief</strong> of the CCS Publication, and I've competed in UI/UX, IT quiz bowls, and social venture challenges — including reaching the semi-finals at the <strong style="color:var(--text)">Harvard WorldMUN Social Venture Challenge 2025</strong>.
+                Beyond coding, I serve as <strong style="color:var(--text)">Associate Editor and Managing Editor</strong> of the CCS Publication, and I've competed in UI/UX, IT quiz bowls, and social venture challenges — including reaching the semi-finals at the <strong style="color:var(--text)">Resolution Project: Social Venture Challenge 2025</strong>.
               </p>
+              -->
             </div>
 
             <!-- Personality / approach -->
-            <div class="card reveal" style="margin-bottom:2rem;">
+            <div class="card reveal about-approach" style="margin-bottom:2rem;">
               <div class="skill-category-title"><i class="fas fa-compass"></i> My Approach</div>
               <p style="color:var(--muted); font-size:0.9rem; line-height:1.7;">
-                I believe in writing clean, maintainable code that solves real problems. I take ownership end-to-end — from understanding the problem space to shipping and iterating. I'm detail-oriented but pragmatic: I ship, then improve. I thrive in collaborative teams and enjoy mentoring peers.
+                I believe in doing thoughtful, high-quality work that solves real problems. I take ownership from start to finish — understanding what's needed, building the solution, and refining it after delivery. I balance attention to detail with a practical mindset, focusing on getting things done first and improving continuously. I enjoy collaborating with others and supporting the growth of those around me. I also have a strong passion for learning, and I'm always looking to expand my skills and knowledge.
               </p>
             </div>
 
             <!-- Education -->
-            <div class="reveal">
+            <div class="reveal about-education">
               <div class="section-tag" style="margin-bottom:1.25rem;">Education</div>
               <div class="edu-card">
                 <div class="edu-school">University of Cebu Lapu-Lapu and Mandaue</div>
                 <div class="edu-degree">Bachelor of Science in Computer Science</div>
                 <div class="edu-period"><i class="fas fa-calendar-alt" style="margin-right:0.4rem;"></i>Aug 2022 – Jun 2026 · Lapu-Lapu City, Cebu</div>
                 <div class="honors-list">
-                  <span class="honor-badge">🏅 Magna Cum Laude Candidate</span>
+                  <span class="honor-badge">🏅 Magna Cum Laude</span>
                   <span class="honor-badge">📋 Dean's Lister</span>
                   <span class="honor-badge">🎓 Academic Scholar 2022–2026</span>
-                  <span class="honor-badge">✍️ Associate Editor-in-Chief, CCS Publication</span>
+                  <span class="honor-badge">✍️ Associate Editor-in-Chief & Managing Editor, CCS Publication</span>
                 </div>
               </div>
             </div>
 
-            <!-- What I'm looking for -->
-            <div class="card reveal">
-              <div class="skill-category-title"><i class="fas fa-search"></i> What I'm Looking For</div>
-              <p style="color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:1rem;">
-                Entry-level roles in software engineering, full-stack development, or AI/ML. I'm particularly excited about products that create real-world impact, and teams where I can grow, learn fast, and contribute meaningfully from day one.
-              </p>
-              <a href="contact.html" class="btn btn-primary btn-sm">
-                <i class="fas fa-paper-plane"></i> Get in Touch
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -177,7 +158,7 @@
               <div class="timeline-period">
                 <i class="fas fa-calendar-alt"></i> Sept – Dec 2025
                 &nbsp;·&nbsp;
-                <i class="fas fa-map-marker-alt"></i> Philippines (Remote / Hybrid)
+                <i class="fas fa-map-marker-alt"></i> Cebu, Philippines (Hybrid)
               </div>
             </div>
             <p class="timeline-desc">
@@ -186,16 +167,12 @@
             <ul class="timeline-bullets">
               <li>Developed ABAP programs for SAP ERP modules including MM (Materials Management), SD (Sales & Distribution), and FI (Financial Accounting).</li>
               <li>Wrote classical ABAP reports and ALV Grid reports for data extraction and business process automation.</li>
-              <li>Built custom function modules, BADIs, and user exits to extend standard SAP functionality.</li>
-              <li>Created smartforms and SAPscript forms for business document generation (invoices, purchase orders).</li>
               <li>Participated in structured code reviews and followed SAP best practices for performance optimization.</li>
-              <li>Collaborated in team-based sprint-like projects simulating real Accenture client engagement scenarios.</li>
             </ul>
             <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem;">
               <span class="chip">SAP ABAP</span>
               <span class="chip">SAP ERP</span>
               <span class="chip">ALV Reports</span>
-              <span class="chip">BAPIs / BADIs</span>
               <span class="chip">Enterprise Systems</span>
             </div>
           </div>
@@ -205,32 +182,28 @@
             <div class="timeline-dot"></div>
             <div class="timeline-header">
               <div class="timeline-company">Alliance Software Inc.</div>
-              <div class="timeline-role">Jumpstart Trainee — Technical Lead</div>
+              <div class="timeline-role">Jumpstart Trainee — Technical Manager</div>
               <div class="timeline-period">
                 <i class="fas fa-calendar-alt"></i> Aug – Nov 2025
                 &nbsp;·&nbsp;
-                <i class="fas fa-map-marker-alt"></i> Cebu, Philippines
+                <i class="fas fa-map-marker-alt"></i> Cebu, Philippines (Hybrid)
               </div>
             </div>
             <p class="timeline-desc">
-              Alliance Software's Jumpstart program is a competitive trainee program for CS students. I was selected as <strong style="color:var(--text)">Technical Lead</strong> for our intern cohort, overseeing the full-stack capstone project from architecture to delivery.
+              Alliance Software's Jumpstart program is a competitive trainee program for CS/IT students. I was selected as <strong style="color:var(--text)">Technical Manager</strong> for our team, overseeing the full-stack project from architecture to delivery.
             </p>
             <ul class="timeline-bullets">
-              <li>Served as Technical Lead for a team of 5 interns, architecting and delivering a full-stack web application within the program timeline.</li>
-              <li>Designed the system architecture using React (frontend) and .NET Core (backend) with MS SQL Server database.</li>
+              <li>Served as Technical Manager for a team of 6 trainees, architecting and delivering a full-stack web application within the program timeline.</li>
+              <li>Designed the system architecture using Razor MVC (frontend) and C# (backend) with MySQL database.</li>
               <li>Managed Git workflows including branching strategies, code reviews, and pull request approvals.</li>
-              <li>Coordinated sprint planning, daily standups, and task delegation using Agile/Scrum methodology.</li>
-              <li>Implemented RESTful API endpoints and integrated authentication with JWT.</li>
               <li>Delivered the final project presentation to Alliance Software's senior management and technical evaluators.</li>
-              <li>Mentored junior teammates on TypeScript best practices, component architecture, and debugging strategies.</li>
             </ul>
             <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem;">
-              <span class="chip">React</span>
-              <span class="chip">.NET Core</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">MS SQL Server</span>
-              <span class="chip">Technical Lead</span>
-              <span class="chip">Agile / Scrum</span>
+              <span class="chip">Razor MVC</span>
+              <span class="chip">C#</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Technical Manager</span>
+              <span class="chip">Agile</span>
             </div>
           </div>
 
@@ -238,30 +211,26 @@
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-header">
-              <div class="timeline-company">Rococo Global Technologies</div>
+              <div class="timeline-company">Rococo Global Technologies Corporation</div>
               <div class="timeline-role">ServiceNow Trainee</div>
               <div class="timeline-period">
                 <i class="fas fa-calendar-alt"></i> Feb – May 2025
                 &nbsp;·&nbsp;
-                <i class="fas fa-map-marker-alt"></i> Cebu, Philippines
+                <i class="fas fa-map-marker-alt"></i> Cebu, Philippines (Online)
               </div>
             </div>
             <p class="timeline-desc">
-              Trained in ServiceNow platform administration, development, and ITSM workflow configuration. Rococo Global Technologies is a ServiceNow Elite Partner, giving direct exposure to enterprise ITSM implementations.
+              Trained in ServiceNow platform administration, development, and workflow configuration. Rococo Global Technologies Corporation is a ServiceNow Elite Partner, giving direct exposure to enterprise ITSM implementations.
             </p>
             <ul class="timeline-bullets">
-              <li>Configured ITSM workflows including Incident Management, Change Management, and Problem Management modules.</li>
-              <li>Developed custom ServiceNow applications using JavaScript-based server-side and client-side scripting.</li>
+              <li>Configured ITSM workflows including Incident Management, and Problem Management modules.</li>
               <li>Created and customized Service Catalog items and record producers for end-user service requests.</li>
               <li>Built Flow Designer workflows to automate business processes and approval chains.</li>
-              <li>Designed and populated Knowledge Base articles and self-service portal customizations.</li>
-              <li>Worked with SLAs, escalation rules, and notification policies in the ITSM context.</li>
             </ul>
             <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem;">
               <span class="chip">ServiceNow</span>
               <span class="chip">ITSM</span>
               <span class="chip">Flow Designer</span>
-              <span class="chip">JavaScript Scripting</span>
               <span class="chip">Service Catalog</span>
             </div>
           </div>
@@ -279,7 +248,7 @@
         <div class="footer-socials">
           <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
         <p class="footer-note">Built with passion in Cebu 🇵🇭</p>
       </div>
@@ -295,11 +264,13 @@
     var menu = document.getElementById('navMobileMenu');
     var backdrop = document.getElementById('navMobileBackdrop');
     var closeBtn = document.getElementById('navMobileClose');
+    var navbar = document.getElementById('navbar');
     if(!hamburger || !menu) return;
 
     function openMenu(){
       menu.classList.add('open');
       if(backdrop) backdrop.classList.add('open');
+      if(navbar) navbar.classList.add('nav-hidden');
       hamburger.classList.add('is-open');
       document.body.style.overflow = 'hidden';
       menu.removeAttribute('aria-hidden');
@@ -307,6 +278,7 @@
     function closeMenu(){
       menu.classList.remove('open');
       if(backdrop) backdrop.classList.remove('open');
+      if(navbar) navbar.classList.remove('nav-hidden');
       hamburger.classList.remove('is-open');
       document.body.style.overflow = '';
       menu.setAttribute('aria-hidden','true');

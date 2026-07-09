@@ -21,6 +21,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html#experience-highlight">Experience</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="achievements.html">Achievements</a></li>
@@ -37,23 +38,24 @@
   <!-- Mobile menu drawer -->
   <div class="nav-mobile-menu" id="navMobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <div class="nav-mobile-header">
-      <span class="nav-mobile-brand">LOV</span>
+      <span class="nav-mobile-brand">My Portfolio</span>
       <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
     </div>
     <nav class="nav-mobile-links">
       <a href="index.html" style="transition-delay:0.06s"><span class="menu-icon"><i class="fas fa-home"></i></span>Home</a>
       <a href="about.html" style="transition-delay:0.10s"><span class="menu-icon"><i class="fas fa-user"></i></span>About Me</a>
-      <a href="skills.html" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
-      <a href="projects.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
-      <a href="achievements.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
-      <a href="contact.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+      <a href="index.html#experience-highlight" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-briefcase"></i></span>Experience</a>
+      <a href="skills.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
+      <a href="projects.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
+      <a href="achievements.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
+      <a href="contact.html" style="transition-delay:0.30s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
     </nav>
     <div class="nav-mobile-footer">
       <span class="nav-mobile-footer-label">Connect</span>
       <div class="nav-mobile-socials">
         <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
@@ -146,6 +148,12 @@
             <div class="contact-form">
               <div class="section-tag" style="margin-bottom:1.5rem;">Send a Message</div>
               <form id="contactForm" novalidate>
+                <!-- Web3Forms -->
+                <input type="hidden" name="access_key" value="2279645b-5383-4d8e-b425-f214706f2297" />
+                <input type="hidden" name="subject" value="New message from your portfolio contact form" />
+                <input type="hidden" name="from_name" value="Lowela Portfolio" />
+                <!-- Honeypot spam protection -->
+                <input type="checkbox" name="botcheck" style="display:none;" />
                 <div class="form-fields">
                   <div class="form-group">
                     <label for="contactName">Your Name</label>
@@ -157,13 +165,14 @@
                     />
                   </div>
                   <div class="form-group">
-                    <label for="contactEmail">Email Address</label>
+                    <label for="contactEmail">Email Address <span style="color:#ff8080;">*</span></label>
                     <input
                       type="email" id="contactEmail" name="email"
                       class="form-control" placeholder="jane@company.com"
                       required autocomplete="email"
                       maxlength="254"
                     />
+                    <span class="form-error" id="contactEmailError" style="display:none; color:#ff8080; font-size:0.8rem; margin-top:0.3rem;">Please enter a valid email address.</span>
                   </div>
                   <div class="form-group">
                     <label for="contactSubject">Subject</label>
@@ -174,7 +183,7 @@
                     />
                   </div>
                   <div class="form-group">
-                    <label for="contactMessage">Message</label>
+                    <label for="contactMessage">Message <span style="color:#ff8080;">*</span></label>
                     <textarea
                       id="contactMessage" name="message"
                       class="form-control" rows="5"
@@ -182,6 +191,7 @@
                       required
                       maxlength="2000"
                     ></textarea>
+                    <span class="form-error" id="contactMessageError" style="display:none; color:#ff8080; font-size:0.8rem; margin-top:0.3rem;">Please enter a message.</span>
                   </div>
                   <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
                     <i class="fas fa-paper-plane"></i> Send Message
@@ -193,6 +203,10 @@
                   <h3>Message sent!</h3>
                   <p>Thanks for reaching out. I'll get back to you as soon as I can.</p>
                 </div>
+                <div class="form-error" style="display:none; align-items:center; gap:0.8rem; padding:1rem 1.2rem; background:rgba(180,60,60,0.08); border:1px solid rgba(180,60,60,0.3); border-radius:var(--r-md, 10px); color:#cf8b8b; font-size:0.9rem; margin-top:0.8rem;">
+                  <i class="fas fa-circle-exclamation" style="font-size:1.2rem;"></i>
+                  <div><strong style="color:#cf8b8b; display:block;">Something went wrong.</strong><span style="color:var(--text-sec); font-size:0.85rem;">Please try again or email me directly at osabellowe@gmail.com</span></div>
+                </div>
               </form>
             </div>
           </div>
@@ -200,20 +214,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA strip -->
-    <section class="section-sm sect-grape">
-      <div class="container">
-        <div class="cta-strip reveal">
-          <h2>Let's build something together.</h2>
-          <p>I'm actively seeking entry-level opportunities in software engineering and AI/ML. Let's talk!</p>
-          <a href="mailto:osabellowe@gmail.com" class="btn btn-primary">
-            <i class="fas fa-envelope"></i> osabellowe@gmail.com
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
 
   <!-- ═══ FOOTER ═══ -->
   <footer class="footer sect-grape">
@@ -223,7 +223,7 @@
         <div class="footer-socials">
           <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
         <p class="footer-note">Built with passion in Cebu 🇵🇭</p>
       </div>
@@ -232,6 +232,91 @@
 
   <script src="js/main.js"></script>
 
+  <!-- ── Contact form: validation + send to Gmail via EmailJS ── -->
+  <script>
+  (function(){
+    // Web3Forms access key is already set below — no further setup needed.
+
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+
+    var emailField   = document.getElementById('contactEmail');
+    var messageField = document.getElementById('contactMessage');
+    var emailError   = document.getElementById('contactEmailError');
+    var messageError = document.getElementById('contactMessageError');
+    var submitBtn    = form.querySelector('button[type="submit"]');
+    var fieldsWrap   = form.querySelector('.form-fields');
+    var successMsg   = form.querySelector('.form-success');
+    var errorMsg     = form.querySelector('.form-error');
+    var accessKeyField = form.querySelector('input[name="access_key"]');
+
+    function showError(field, errorEl, show){
+      field.style.borderColor = show ? '#ff8080' : '';
+      if (errorEl) errorEl.style.display = show ? 'block' : 'none';
+    }
+
+    function isValidEmail(value){
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+    }
+
+    emailField.addEventListener('input', function(){
+      if (isValidEmail(emailField.value)) showError(emailField, emailError, false);
+    });
+    messageField.addEventListener('input', function(){
+      if (messageField.value.trim() !== '') showError(messageField, messageError, false);
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      if (errorMsg) errorMsg.style.display = 'none';
+
+      var emailValid   = isValidEmail(emailField.value);
+      var messageValid = messageField.value.trim() !== '';
+
+      showError(emailField, emailError, !emailValid);
+      showError(messageField, messageError, !messageValid);
+
+      if (!emailValid || !messageValid) {
+        (!emailValid ? emailField : messageField).focus();
+        return;
+      }
+
+      if (!accessKeyField || accessKeyField.value === "YOUR_WEB3FORMS_ACCESS_KEY") {
+        alert("The contact form isn't fully set up yet — a Web3Forms access key still needs to be added. See the comment at the top of this script.");
+        return;
+      }
+
+      var originalHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+      var data = new FormData(form);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+        .then(function(res){ return res.json(); })
+        .then(function(json){
+          if (json.success) {
+            if (fieldsWrap) fieldsWrap.style.display = 'none';
+            if (successMsg) successMsg.style.display = 'block';
+            form.reset();
+          } else {
+            throw new Error(json.message || 'Submission failed');
+          }
+        })
+        .catch(function(err){
+          console.error('Web3Forms error:', err);
+          if (errorMsg) errorMsg.style.display = 'flex';
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHtml;
+        });
+    });
+  })();
+  </script>
+
   <!-- ── Mobile menu patch: new drawer behaviour ── -->
   <script>
   (function(){
@@ -239,11 +324,13 @@
     var menu = document.getElementById('navMobileMenu');
     var backdrop = document.getElementById('navMobileBackdrop');
     var closeBtn = document.getElementById('navMobileClose');
+    var navbar = document.getElementById('navbar');
     if(!hamburger || !menu) return;
 
     function openMenu(){
       menu.classList.add('open');
       if(backdrop) backdrop.classList.add('open');
+      if(navbar) navbar.classList.add('nav-hidden');
       hamburger.classList.add('is-open');
       document.body.style.overflow = 'hidden';
       menu.removeAttribute('aria-hidden');
@@ -251,6 +338,7 @@
     function closeMenu(){
       menu.classList.remove('open');
       if(backdrop) backdrop.classList.remove('open');
+      if(navbar) navbar.classList.remove('nav-hidden');
       hamburger.classList.remove('is-open');
       document.body.style.overflow = '';
       menu.setAttribute('aria-hidden','true');

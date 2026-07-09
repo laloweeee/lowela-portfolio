@@ -21,6 +21,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html#experience-highlight">Experience</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="achievements.html">Achievements</a></li>
@@ -37,23 +38,24 @@
   <!-- Mobile menu drawer -->
   <div class="nav-mobile-menu" id="navMobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <div class="nav-mobile-header">
-      <span class="nav-mobile-brand">LOV</span>
+      <span class="nav-mobile-brand">My Portfolio</span>
       <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
     </div>
     <nav class="nav-mobile-links">
       <a href="index.html" style="transition-delay:0.06s"><span class="menu-icon"><i class="fas fa-home"></i></span>Home</a>
       <a href="about.html" style="transition-delay:0.10s"><span class="menu-icon"><i class="fas fa-user"></i></span>About Me</a>
-      <a href="skills.html" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
-      <a href="projects.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
-      <a href="achievements.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
-      <a href="contact.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
+      <a href="index.html#experience-highlight" style="transition-delay:0.14s"><span class="menu-icon"><i class="fas fa-briefcase"></i></span>Experience</a>
+      <a href="skills.html" style="transition-delay:0.18s"><span class="menu-icon"><i class="fas fa-code"></i></span>Skills</a>
+      <a href="projects.html" style="transition-delay:0.22s"><span class="menu-icon"><i class="fas fa-folder-open"></i></span>Projects</a>
+      <a href="achievements.html" style="transition-delay:0.26s"><span class="menu-icon"><i class="fas fa-trophy"></i></span>Achievements</a>
+      <a href="contact.html" style="transition-delay:0.30s"><span class="menu-icon"><i class="fas fa-envelope"></i></span>Contact</a>
     </nav>
     <div class="nav-mobile-footer">
       <span class="nav-mobile-footer-label">Connect</span>
       <div class="nav-mobile-socials">
         <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
@@ -61,7 +63,7 @@
   <!-- ═══ PAGE HERO ═══ -->
   <div class="page-hero sect-grape">
     <div class="container">
-      <div class="section-tag reveal">Technical Skills</div>
+      <div class="section-tag reveal">Skills</div>
       <h1 class="page-hero-title reveal">My Tech Stack</h1>
       <p class="page-hero-sub reveal">From systems programming to AI pipelines — here's what I work with.</p>
     </div>
@@ -159,7 +161,6 @@
             <div class="skill-tags">
               <span class="skill-tag">Firebase</span>
               <span class="skill-tag">Supabase</span>
-              <span class="skill-tag">Firestore</span>
             </div>
           </div>
         </div>
@@ -195,6 +196,8 @@
               <span class="skill-tag">Microsoft Excel</span>
               <span class="skill-tag">Google Sheets</span>
               <span class="skill-tag">Google Docs</span>
+              <span class="skill-tag">Canva</span>
+              <span class="skill-tag">Google Forms</span>
               <span class="skill-tag">Notion</span>
             </div>
           </div>
@@ -212,7 +215,7 @@
         <div class="footer-socials">
           <a href="https://github.com/laloweeee" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://linkedin.com/in/lowela-villadolid/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:osabellowe@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="contact.html" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
         <p class="footer-note">Built with passion in Cebu 🇵🇭</p>
       </div>
@@ -228,11 +231,13 @@
     var menu = document.getElementById('navMobileMenu');
     var backdrop = document.getElementById('navMobileBackdrop');
     var closeBtn = document.getElementById('navMobileClose');
+    var navbar = document.getElementById('navbar');
     if(!hamburger || !menu) return;
 
     function openMenu(){
       menu.classList.add('open');
       if(backdrop) backdrop.classList.add('open');
+      if(navbar) navbar.classList.add('nav-hidden');
       hamburger.classList.add('is-open');
       document.body.style.overflow = 'hidden';
       menu.removeAttribute('aria-hidden');
@@ -240,6 +245,7 @@
     function closeMenu(){
       menu.classList.remove('open');
       if(backdrop) backdrop.classList.remove('open');
+      if(navbar) navbar.classList.remove('nav-hidden');
       hamburger.classList.remove('is-open');
       document.body.style.overflow = '';
       menu.setAttribute('aria-hidden','true');
