@@ -527,33 +527,52 @@ h1,h2,h3,h4,h5 { font-family:var(--font-h); line-height:1.15; font-weight:700; }
 }
 .project-link:hover { color:var(--text); border-color:var(--border-h); }
 
-/* ─── Project Card → Clickable Thumb (opens storyboard modal) ─── */
-.project-thumb { cursor:pointer; }
-.project-thumb-view {
-  position:absolute; inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0) 65%);
-  display:flex; align-items:flex-end; justify-content:flex-start;
-  padding:0.85rem;
-  opacity:0; transition:opacity 0.25s var(--ease);
+/* ─── Project Card → Expand button opens storyboard modal (image itself is inert) ─── */
+.project-thumb { cursor:default; }
+.project-thumb img { pointer-events:none; }
+.project-thumb-count { pointer-events:none; }
+
+/* Expand icon button — same design language as the achievements cards */
+.project-expand-btn {
+  position:absolute; top:0.6rem; right:0.6rem; z-index:2;
+  width:2.1rem; height:2.1rem; border-radius:50%;
+  background:rgba(10,6,20,0.55); border:1px solid rgba(255,255,255,0.25);
+  color:#fff; font-size:0.85rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:translateY(-4px);
+  transition:opacity 0.25s, transform 0.25s, background 0.25s;
+  backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);
 }
-.project-thumb:hover .project-thumb-view,
-.project-thumb:focus-visible .project-thumb-view { opacity:1; }
-.project-thumb-view span {
-  display:inline-flex; align-items:center; gap:0.4rem;
-  background:rgba(255,255,255,0.14); backdrop-filter:blur(6px);
-  border:1px solid rgba(255,255,255,0.35); color:#fff;
-  border-radius:var(--r-full); padding:0.35rem 0.85rem;
-  font-size:0.76rem; font-weight:600; transform:translateY(6px);
-  transition:transform 0.25s var(--ease);
+.project-card:hover .project-expand-btn,
+.project-expand-btn:focus-visible {
+  opacity:1; transform:translateY(0);
 }
-.project-thumb:hover .project-thumb-view span { transform:translateY(0); }
+.project-expand-btn:hover,
+.project-expand-btn:focus-visible {
+  background:var(--accent); border-color:var(--accent);
+}
+/* Always show on touch devices where hover isn't available */
+@media (hover:none) {
+  .project-expand-btn { opacity:1; transform:none; }
+}
+
 .project-thumb-count {
-  position:absolute; top:0.65rem; right:0.65rem;
+  position:absolute; top:0.65rem; left:0.65rem; z-index:2;
   background:rgba(0,0,0,0.55); backdrop-filter:blur(6px); color:#fff;
   border-radius:var(--r-full); padding:0.2rem 0.6rem;
   font-size:0.68rem; font-weight:700; letter-spacing:0.02em;
   display:inline-flex; align-items:center; gap:0.3rem;
+  opacity:0; transform:translateY(-4px);
+  transition:opacity 0.25s, transform 0.25s;
 }
+.project-card:hover .project-thumb-count,
+.project-thumb-count:focus-visible {
+  opacity:1; transform:translateY(0);
+}
+@media (hover:none) {
+  .project-thumb-count { opacity:1; transform:none; }
+}
+
 
 /* ─── Storyboard Modal ─── */
 .pm-overlay {
@@ -633,7 +652,7 @@ h1,h2,h3,h4,h5 { font-family:var(--font-h); line-height:1.15; font-weight:700; }
 }
 
 .pm-caption {
-  padding:0.85rem 1.25rem 1.15rem; font-family:var(--font-h);
+  padding:0.85rem 1.25rem 0.15rem; font-family:var(--font-h);
   font-size:1rem; font-weight:700; color:var(--text);
   line-height:1.5; text-align:center;
 }
@@ -1220,6 +1239,72 @@ textarea.form-control { resize:vertical; min-height:130px; font-size:0.9rem; }
 }
 .ach-card-top img {
   width:100%; height:100%; object-fit:cover; display:block;
+  cursor:default; pointer-events:none;
+}
+
+/* Expand icon button on card image */
+.ach-card-top { position:relative; }
+.ach-expand-btn {
+  position:absolute; top:0.6rem; right:0.6rem; z-index:2;
+  width:2.1rem; height:2.1rem; border-radius:50%;
+  background:rgba(10,6,20,0.55); border:1px solid rgba(255,255,255,0.25);
+  color:#fff; font-size:0.85rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:translateY(-4px);
+  transition:opacity 0.25s, transform 0.25s, background 0.25s;
+  backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px);
+}
+.ach-card:hover .ach-expand-btn,
+.ach-expand-btn:focus-visible {
+  opacity:1; transform:translateY(0);
+}
+.ach-expand-btn:hover,
+.ach-expand-btn:focus-visible {
+  background:var(--accent); border-color:var(--accent);
+}
+/* Always show on touch devices where hover isn't available */
+@media (hover:none) {
+  .ach-expand-btn { opacity:1; transform:none; }
+}
+
+/* Image lightbox / expanded view */
+.ach-lightbox {
+  position:fixed; inset:0; z-index:2000;
+  background:rgba(8,5,16,0.92);
+  display:flex; align-items:center; justify-content:center;
+  padding:2rem;
+  opacity:0; visibility:hidden;
+  transition:opacity 0.3s ease, visibility 0.3s ease;
+}
+.ach-lightbox.open {
+  opacity:1; visibility:visible;
+}
+.ach-lightbox-img {
+  max-width:min(92vw, 1000px); max-height:88vh;
+  border-radius:var(--r-lg, 12px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.55);
+  transform:scale(0.94);
+  transition:transform 0.3s ease;
+  display:block;
+}
+.ach-lightbox.open .ach-lightbox-img {
+  transform:scale(1);
+}
+.ach-lightbox-close {
+  position:absolute; top:1.25rem; right:1.25rem;
+  width:2.75rem; height:2.75rem; border-radius:50%;
+  background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.22);
+  color:#fff; font-size:1.05rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition:background 0.2s;
+}
+.ach-lightbox-close:hover,
+.ach-lightbox-close:focus-visible {
+  background:rgba(255,255,255,0.22);
+}
+@media (max-width:480px) {
+  .ach-lightbox { padding:1rem; }
+  .ach-lightbox-close { top:0.75rem; right:0.75rem; width:2.4rem; height:2.4rem; }
 }
 
 /* Body */
