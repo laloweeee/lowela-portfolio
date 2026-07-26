@@ -1,6 +1,6 @@
 /* ============================================================
    FILE: js/main.js — Lowela O. Villadolid Portfolio
-   Tour, Scroll Reveal, Typed Text, Mobile Nav
+   Scroll Reveal, Typed Text, Mobile Nav
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -107,89 +107,6 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(typeStep, delay);
     }
     typeStep();
-  }
-
-  /* ─── Onboarding Tour (index.html only) ─── */
-  var tourOverlay = document.getElementById('tour-overlay');
-  if (tourOverlay) {
-    if (localStorage.getItem('portfolio_tour_done') === 'true') {
-      tourOverlay.remove();
-    } else {
-      initTour();
-    }
-  }
-
-  function initTour() {
-    var overlay  = document.getElementById('tour-overlay');
-    var hl       = document.getElementById('tour-highlight');
-    var tt       = document.getElementById('tour-tooltip');
-    var stepNum  = document.getElementById('tour-step-num');
-    var tourTitle = document.getElementById('tour-title');
-    var tourDesc  = document.getElementById('tour-desc');
-    var nextBtn  = document.getElementById('tour-next');
-    var prevBtn  = document.getElementById('tour-prev');
-    var skipBtn  = document.getElementById('tour-skip');
-    var dots     = document.querySelectorAll('.tour-dot');
-
-    var steps = [
-      { sel: '#navbar',            title: 'Navigate Between Sections',        desc: 'Use the floating pill nav bar to jump to any section — About, Skills, Projects, and more.' },
-      { sel: '.hero-btns',         title: 'Explore My Work or Grab My Resume', desc: 'Check out my featured projects or download my résumé from right here on the hero.' },
-      { sel: '#skills-snap',       title: 'See What I Bring to the Table',     desc: 'A quick snapshot of my core technical skills. Click "See All Skills" for the full picture.' },
-      { sel: '#featured-projects', title: "Check Out What I've Built",          desc: 'Featured projects with real-world tech stacks. Each card links to full details.' },
-      { sel: '.nav-hamburger',     title: 'Mobile Menu',                        desc: 'On smaller screens, tap the hamburger icon to open the full navigation menu.' },
-    ];
-
-    var cur = 0;
-
-    function place(targetEl) {
-      var r = targetEl.getBoundingClientRect();
-      var pad = 10, vpW = window.innerWidth, vpH = window.innerHeight;
-      hl.style.left   = (r.left - pad) + 'px';
-      hl.style.top    = (r.top  - pad) + 'px';
-      hl.style.width  = (r.width  + pad * 2) + 'px';
-      hl.style.height = (r.height + pad * 2) + 'px';
-      var ttW = 292, ttL = r.left, ttT = r.bottom + 18;
-      if (ttT + 240 > vpH) ttT = r.top - 250;
-      if (ttL + ttW > vpW - 16) ttL = vpW - ttW - 16;
-      if (ttL < 16) ttL = 16;
-      if (ttT < 80) ttT = 80;
-      tt.style.left = ttL + 'px';
-      tt.style.top  = ttT + 'px';
-    }
-
-    function showStep(idx) {
-      var step = steps[idx];
-      var el = document.querySelector(step.sel);
-      if (!el) { endTour(); return; }
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(function () {
-        place(el);
-        stepNum.textContent   = 'Step ' + (idx + 1) + ' of ' + steps.length;
-        tourTitle.textContent = step.title;
-        tourDesc.textContent  = step.desc;
-        prevBtn.style.display = idx === 0 ? 'none' : '';
-        nextBtn.textContent   = idx === steps.length - 1 ? 'Finish ✓' : 'Next →';
-        dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
-      }, 380);
-    }
-
-    function endTour() {
-      localStorage.setItem('portfolio_tour_done', 'true');
-      overlay.style.transition = 'opacity 0.4s';
-      overlay.style.opacity = '0';
-      setTimeout(function () { overlay.style.display = 'none'; }, 420);
-    }
-
-    nextBtn.addEventListener('click', function () {
-      if (cur < steps.length - 1) { cur++; showStep(cur); } else { endTour(); }
-    });
-    prevBtn.addEventListener('click', function () {
-      if (cur > 0) { cur--; showStep(cur); }
-    });
-    skipBtn.addEventListener('click', endTour);
-
-    overlay.style.display = 'block';
-    setTimeout(function () { showStep(0); }, 700);
   }
 
   /* ─── Contact Form ─── */

@@ -943,34 +943,6 @@ textarea.form-control { resize:vertical; min-height:130px; font-size:0.9rem; }
 /* ─── Custom Cursor ─── */
 .cursor-dot, .cursor-ring { display:none; }
 
-/* ─── Tour Overlay ─── */
-#tour-overlay { position:fixed; inset:0; z-index:9000; pointer-events:none; display:none; }
-#tour-highlight {
-  position:fixed; border-radius:12px; pointer-events:none; z-index:9001;
-  box-shadow:0 0 0 9999px rgba(0,0,0,0.68), 0 0 0 3px var(--accent), 0 0 22px 4px rgba(var(--accent-rgb),0.5);
-  transition:left 0.42s var(--ease), top 0.42s var(--ease), width 0.42s var(--ease), height 0.42s var(--ease);
-}
-#tour-tooltip {
-  position:fixed; background:var(--surface); border:1.5px solid var(--border-h);
-  border-radius:var(--r-xl); padding:1.5rem 1.5rem 1.25rem;
-  width:min(292px, calc(100vw - 2rem));
-  box-shadow:var(--sh-lg); pointer-events:all; z-index:9002;
-  transition:left 0.42s var(--ease), top 0.42s var(--ease);
-}
-.tour-progress { display:flex; gap:5px; margin-bottom:0.85rem; }
-.tour-dot { width:6px; height:6px; border-radius:50%; background:var(--border-h); transition:background 0.3s; }
-.tour-dot.active { background:var(--accent); }
-.tour-step-label { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:0.4rem; }
-.tour-title { font-family:var(--font-h); font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.4rem; }
-.tour-desc  { font-size:0.84rem; color:var(--muted); line-height:1.6; margin-bottom:1.2rem; }
-.tour-actions { display:flex; align-items:center; gap:0.5rem; }
-.tour-btn { padding:0.42rem 1rem; border-radius:var(--r-full); font-size:0.8rem; font-weight:600; cursor:pointer; border:none; font-family:var(--font-b); transition:all 0.2s; }
-.tour-btn-primary { background:#ffffff; color:#36255C; }
-.tour-btn-primary:hover { opacity:0.9; }
-.tour-btn-ghost { background:transparent; color:var(--muted); }
-.tour-btn-ghost:hover { color:var(--text); }
-.tour-btn-skip { margin-left:auto; font-size:0.77rem; }
-
 /* ─── View More ─── */
 .view-more {
   display:inline-flex; align-items:center; gap:0.4rem;
