@@ -652,7 +652,7 @@ h1,h2,h3,h4,h5 { font-family:var(--font-h); line-height:1.15; font-weight:700; }
 }
 
 .pm-caption {
-  padding:0.85rem 1.25rem 0.15rem; font-family:var(--font-h);
+  padding:0.85rem 1.25rem 0.50rem; font-family:var(--font-h);
   font-size:1rem; font-weight:700; color:var(--text);
   line-height:1.5; text-align:center;
 }
