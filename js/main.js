@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ─── Typed Text ─── */
   var typedEl = document.getElementById('typedRole');
   if (typedEl) {
-    var roles = ['Full-Stack Developer', 'AI/ML Engineer', 'Problem Solver', 'Tech Explorer'];
+    var roles = ['Full-Stack Developer', 'UI/UX Designer', 'AI/ML Engineer', 'Problem Solver', 'Tech Explorer'];
     var ri = 0, ci = 0, deleting = false;
     function typeStep() {
       var cur = roles[ri];
